@@ -1,5 +1,6 @@
 import telesign
 from telesign.messaging import MessagingClient
+import shkia
 
 
 def send_text(mobil_phone,msg):
