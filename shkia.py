@@ -19,4 +19,6 @@ def get_shkia(zipcode):
             print(string2)
             shkia = string2[2]
             print(shkia)
-            print('Shkia this week is at {}'.format(shkia))
+            print('Shkia this week is at {}'.format(shkia)) 
+    
+    return shkia
