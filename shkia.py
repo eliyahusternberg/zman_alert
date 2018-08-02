@@ -1,8 +1,13 @@
 import requests
 import json
 
+def main():
+    zipcode =('?cfg=json&geo=zip&zip=11691&b=0&m=72' )
+    get_shkia(zipcode)
+
+
 def get_shkia(zipcode):
-    url = 'http://www.hebcal.com/shabbat/?cfg=json&geo=zip&zip=11691&b=0&m=72'
+    url = 'http://www.hebcal.com/shabbat/''?cfg=json&geo=zip&zip=11691&b=0&m=72'
     response = requests.get(url)
     data = json.loads(response.text)
     from pprint import pprint
@@ -19,6 +24,9 @@ def get_shkia(zipcode):
             print(string2)
             shkia = string2[2]
             print(shkia)
-            print('Shkia this week is at {}'.format(shkia)) 
-    
+            print('Shkia this week is at {}'.format(shkia))
+
     return shkia
+
+if __name__ == '__main__':
+    main()
