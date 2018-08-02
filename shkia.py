@@ -1,9 +1,6 @@
 import requests
 import json
 
-def main():
-    zipcode =('?cfg=json&geo=zip&zip=11691&b=0&m=72' )
-    get_shkia(zipcode)
 
 
 def get_shkia(zipcode):
@@ -28,5 +25,4 @@ def get_shkia(zipcode):
 
     return shkia
 
-if __name__ == '__main__':
-    main()
+get_shkia('11691')
