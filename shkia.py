@@ -25,4 +25,4 @@ def get_shkia(zipcode):
 
     return shkia
 
-get_shkia('11691')
+zip = get_shkia('11691')
