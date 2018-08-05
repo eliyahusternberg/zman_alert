@@ -3,8 +3,9 @@ import json
 
 
 
+
 def get_shkia(zipcode):
-    url = 'http://www.hebcal.com/shabbat/''?cfg=json&geo=zip&zip=11691&b=0&m=72'
+    url = 'http://www.hebcal.com/shabbat/''?cfg=json&geo=zip&zip={}&b=0&m=72'.format(zipcode)
     response = requests.get(url)
     data = json.loads(response.text)
     from pprint import pprint
@@ -25,4 +26,4 @@ def get_shkia(zipcode):
 
     return shkia
 
-zip = get_shkia('11691')
+zip= get_shkia(input('Enter a zipcode:'))
