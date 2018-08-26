@@ -18,7 +18,7 @@ def send_text(mobile_phone, msg):
     print(response, messaging.message(phone_number, message, message_type))
 
 
-schedule.every().sunday().do(send_text,'17189868004','shkia is at {}'.format(shkia))
+schedule.every().saturday.do(send_text,input('Enter a phone number:'),'shkia is at {}'.format(get_shkia(input('Enter zipcode:'))))
 while True:
     schedule.run_pending()
     time.sleep(1)
