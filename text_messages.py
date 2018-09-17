@@ -22,4 +22,3 @@ schedule.every().saturday.do(send_text,input('Enter a phone number:'),'shkia is 
 while True:
     schedule.run_pending()
     time.sleep(1)
-send_text(input('Enter your phone number:'), ('Shkia is at {}'.format(get_shkia(input('Enter zipcode')))))
